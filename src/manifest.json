@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Custom New Tab Page",
-  "version": "1.0.0-dark",
+  "version": "1.0.0.dark",
   "description": "Specify a custom URL to be shown when opening a new tab, without changing the address bar content",
   "developer": {
     "name": "MethodGrab",
@@ -21,20 +21,12 @@
     "page": "options.html",
     "browser_style": true
   },
-  "permissions": [
-    "storage"
-  ],
-  "optional_permissions": [
-    "<all_urls>",
-    "webRequest",
-    "webRequestBlocking"
-  ],
-  "chrome_url_overrides" : {
+  "permissions": ["storage"],
+  "optional_permissions": ["<all_urls>", "webRequest", "webRequestBlocking"],
+  "chrome_url_overrides": {
     "newtab": "app.html"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   }
 }
